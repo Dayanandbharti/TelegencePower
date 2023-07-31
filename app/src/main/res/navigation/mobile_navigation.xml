@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.telegence.app.Main_Menu.MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu" />
+
+    <fragment
+        android:id="@+id/nav_my_profile"
+        android:name="com.telegence.app.Profile.Profile_Tab_F"
+        tools:layout="@layout/fragment_user_profile"  />
+
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.telegence.app.Orders.Order_F"
+        tools:layout="@layout/fragment_orders"  />
+
+   <fragment
+        android:id="@+id/nav_my_courses"
+        android:name="com.telegence.app.Attendance.My_Courses.Fragment_My_Courses"
+        tools:layout="@layout/fragment_markattendance"  />
+
+
+    <fragment
+        android:id="@+id/nav_important_links"
+        android:name="com.telegence.app.ImportantLinks.ImportantLinks_F"
+        tools:layout="@layout/fragment_importantlinks" />
+
+    <fragment
+        android:id="@+id/nav_mark_attendance"
+        android:name="com.telegence.app.Attendance.Mark_Attendance.Fragment_Mark_Attendance"
+        tools:layout="@layout/fragment_markattendance" />
+
+    <fragment
+        android:id="@+id/nav_view_attendance"
+        android:name="com.telegence.app.Attendance.Fragment_View_Attendance"
+        tools:layout="@layout/frag_view_attendence" />
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.telegence.app.ui.SupportFragemnt"
+        tools:layout="@layout/fragment_support" />
+
+    <fragment
+        android:id="@+id/nav_refer"
+        android:name="com.telegence.app.Profile.Refer_F"
+        tools:layout="@layout/fragment_refer"  />
+
+    <fragment
+        android:id="@+id/nav_log_out"
+        android:name="com.telegence.app.Authentication.Fragment_Logout"
+        tools:layout="@layout/blank"  />
+</navigation>

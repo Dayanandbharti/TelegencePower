@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainlayout" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        android:translationZ="5dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/view_head"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_below="@+id/view_separator1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:id="@+id/sr"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.10"
+                android:layout_height="wrap_content"
+                android:text="# ID"
+                android:id="@+id/posted_by_id"
+
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:id="@+id/username"
+                
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/emp_id"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="Details"
+                android:id="@+id/message"
+                android:textColor="@color/black"
+                
+                android:textSize="10sp"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.10"
+                android:layout_height="10dp"
+                android:text="Appr."
+                android:src="@drawable/cancel_icon"
+                android:scaleType="centerInside"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:id="@+id/status_image"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--Date-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datetxt"
+        android:visibility="gone"
+        android:textSize="10sp"
+        android:gravity="right|center_vertical"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="1 January"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:src="@drawable/round_profile_image_placeholder"
+        android:id="@+id/user_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/posted_by_name"
+        android:text="Abhi Kumar"
+        android:textSize="8dp"
+        android:visibility="gone"
+        android:maxLines="2"
+        android:layout_gravity="right"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        />
+
+</RelativeLayout>
+

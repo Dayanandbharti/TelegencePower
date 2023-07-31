@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_color"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_weight="1"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent"
+                android:id="@+id/Goback"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:visibility="gone"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_back"
+                android:tint="@color/colorAccent"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KYC Verification\n(Mandatory)"
+                android:layout_centerInParent="true"
+                android:id="@+id/username"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:textColor="@color/app_sec_color"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_for_verification"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textColor="@color/app_sec_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upper_body"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical|start"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/app_sec_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submitting a request for document verification. \nCompany does not guarantee that your account will be verified unless and untill your KYC is verified."
+                android:textSize="14sp"
+
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_vertical|start"
+                android:justificationMode="inter_word"
+                android:textColor="@color/app_sec_color"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/app_sec_color"
+                    android:text="Aadhar Card Number"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/username_edit"
+                    android:textSize="14sp"
+                    android:digits="1234567890"
+                    android:hint="Aadhar Card Number"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:maxLength="12"
+                    android:imeOptions="actionNext"
+                    android:backgroundTint="@color/transparent"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_sec_color"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/app_sec_color"
+                android:text="Full name"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/fullname_edit"
+                android:textSize="14sp"
+                android:hint="Full name"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/transparent"/>
+
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/viewadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aadhar Card"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:layout_toStartOf="@+id/choose_file_btn"
+                        android:id="@+id/file_name_txt"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose File"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:id="@+id/choose_file_btn"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorAccent"/>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/document_divider"
+                    android:layout_below="@+id/viewadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/document_divider"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/other_file_name_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Any Other govt issued documents"
+                            android:textSize="16sp"
+                            android:padding="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/choose_other_file_btn"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose File"
+                            android:textSize="16sp"
+                            android:padding="5dp"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/choose_other_file_btn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="20dp"
+                            android:textColor="@color/colorAccent"/>
+
+
+
+                    </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We require an additional government-issued photo ID that reflects your name and date of birth(e.g driving license/ Voter ID Card/ PAN Card etc) in order to review your KYC request. \nPAN Card is mandatory if the investment exceeds Rs. 50,000 in total in addition to the above required Government issued documents."
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical|start"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/app_sec_color"/>
+
+
+            <Button
+                style="@style/MaterialButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                android:layout_gravity="center"
+                android:background="@drawable/d_round_red25"
+                android:gravity="center"
+                android:id="@+id/send_btn"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Send" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

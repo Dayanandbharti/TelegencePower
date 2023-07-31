@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view" >
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_white"
+        android:title="Home"
+        android:checked="true" />
+
+    <item
+        android:id="@+id/nav_my_profile"
+        android:icon="@drawable/user_icon_menu"
+        android:iconTint="@color/white"
+        android:iconTintMode="src_over"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/nav_my_orders"
+        android:icon="@drawable/order"
+        android:visible="false"
+        android:title="Fee Details" />
+
+    <item
+        android:id="@+id/nav_my_courses"
+        android:icon="@drawable/order"
+        android:title="My Courses" />
+
+    <item
+        android:id="@+id/nav_important_links"
+        android:icon="@drawable/link_icon"
+        android:visible="false"
+        android:title="Important Links" />
+
+    <item
+        android:id="@+id/nav_mark_attendance"
+        android:icon="@drawable/calendar_icon"
+        android:title="Attendance" />
+
+    <item
+        android:id="@+id/nav_view_attendance"
+        android:icon="@drawable/calendar_icon"
+        android:visible="false"
+        android:title="Attendance" />
+
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/how_to_use"
+        android:visible="true"
+        android:title="How to Use" />
+
+    <item
+        android:id="@+id/nav_refer"
+        android:icon="@drawable/share_icons"
+        android:title="Share App" />
+
+    <item
+        android:id="@+id/nav_log_out"
+        android:icon="@drawable/log_out"
+        android:title="Log Out" />
+
+</menu>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayout"
+    android:gravity="center"
+    android:clickable="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginVertical="2dp"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/txttophead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latest Updated Balance"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/view_Wallet_Amt"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txttophead">
+
+            <TextView
+                android:id="@+id/txt_current_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/white_rupee"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:id="@+id/txt_add_money_req"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_round_white_background"
+                android:backgroundTint="@color/blue"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="Add Money Request"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_send_req"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_round_white_background"
+                android:backgroundTint="@color/blue"
+                android:layout_below="@+id/txt_add_money_req"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="Send Money"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/view_Action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:layout_below="@+id/view_Wallet_Amt"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/receive_money_btn"
+                android:scaleType="fitXY"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:text="Receive"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_Action"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@drawable/d_top_round_white_background"
+            android:textColor="@color/black">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="8dp"
+                android:background="@drawable/d_round_white_background"
+                android:backgroundTint="@color/light_gray"
+                android:layout_gravity="center"
+                android:layout_marginVertical="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENT TRANSACTIONS"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginVertical="15dp"
+                android:textColor="@color/black"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:fitsSystemWindows="true"
+                android:nestedScrollingEnabled="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.10"
+                        android:layout_height="wrap_content"
+                        android:text="#"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.25"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtamount"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.25"
+                        android:layout_height="wrap_content"
+                        android:text="Amount\nGold(gm)"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ratehead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.20"
+                        android:gravity="center_horizontal"
+                        android:text="Rate\n(₹)"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                         />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.20"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/grdbatch"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:stretchMode="columnWidth" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recylerview"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

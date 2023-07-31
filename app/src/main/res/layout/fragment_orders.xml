@@ -1,0 +1,501 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Setting_F"
+    android:clickable="false"
+    android:background="@color/app_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:clickable="false"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/d_bottom_gray_line"
+            android:clickable="false"
+            >
+            <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitStart"
+                android:id="@+id/Goback"
+                android:tint="@color/black"
+                android:src="@drawable/ic_back"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wallet"
+                android:textSize="15sp"
+
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"/>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_below="@+id/toolbar1">
+
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/d_bottom_gray_line"
+                    android:onClick="onClick"
+                    android:padding="15dp"
+                    android:text="Diamonds"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                     />
+
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/d_bottom_gray_line"
+                    android:padding="15dp"
+                    android:text="Coins"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="10dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.50"
+                            android:layout_height="match_parent"
+                            android:text="My Diamonds"
+                            android:textSize="18sp"
+
+                            android:layout_alignParentLeft="true"
+
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.50"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="18sp"
+                            android:layout_alignParentLeft="true"
+
+
+
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="10dp" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="History"
+                            android:drawableLeft="@drawable/icon_remain_time"
+                            android:textSize="8sp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/gray"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:background="@drawable/account"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:clickable="false"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:layout_centerVertical="true">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:id="@+id/headingmiddle"
+                            android:textSize="28sp"
+
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="My Diamonds"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:drawableEnd="@drawable/dimond"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:layout_below="@+id/headingmiddle"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:textAlignment="center"
+                            android:text="0"
+                            />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_below="@+id/headingmiddle"
+                            android:textSize="18sp"
+                            android:clickable="false"
+                            android:visibility="gone"
+                            android:textAlignment="center"
+                            android:text="0 = 0 INR"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"
+                        android:paddingHorizontal="10dp" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="History"
+                            android:layout_marginTop="20dp"
+                            android:drawableLeft="@drawable/icon_remain_time"
+                            android:textSize="8sp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/gray"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diamond Transactions"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="India"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/gray"/>
+
+                </RelativeLayout>
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchMode="columnWidth"
+                    android:numColumns="1"
+                    android:id="@+id/grdbatch" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:background="@drawable/account"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:gravity="center" >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:id="@+id/txtcoin_balance"
+                            android:gravity="center"
+                            android:clickable="false"
+                            android:textAlignment="center"
+                            android:text="0 = 0 INR"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:clickable="false"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="0 = 0 INR"
+                            />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_below="@+id/txtcoin_balance"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:text="Account Balance"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="10dp" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="History"
+                            android:layout_marginTop="20dp"
+                            android:drawableLeft="@drawable/icon_remain_time"
+                            android:textSize="8sp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/gray"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    tools:src="@drawable/exchange_diamonds" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    tools:src="@drawable/exchange_rewards" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/d_round_gray_border"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No of Coin"
+
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/gray"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:numeric="integer"
+
+                            android:maxLength="4"
+                            android:layout_toStartOf="@+id/btn_exchange"
+                            android:textColor="@color/gray"
+                            android:layout_marginEnd="10dp"
+                            android:hint="0000"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:background="@drawable/d_gray_border_white_bg"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_exchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:background="@drawable/d_gray_border_white_bg"
+                            android:text="Exchange"
+                            android:clickable="false"
+                            android:backgroundTint="@color/redcolor"
+                            android:textColor="@color/white"
+
+                            android:layout_alignParentEnd="true"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Password"
+
+                    android:clickable="false"
+                    android:textColor="@color/gray"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:clickable="false"
+
+                    android:layout_height="wrap_content"
+                    android:text="1. Only users with the correct password can cash out coins or exchange coins for diamonds
+\n
+2. If you forget or need to reset your, password please tap forget password?
+\n
+3. If you have any other Quetions please tap feedback to contact us.
+"
+                    android:textColor="@color/gray"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash out Rules"
+
+                    android:textColor="@color/gray"
+                    android:clickable="false"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="1. You need 3150 coins to submit a cash out request.
+                The Cash out amount must not exceeded 1,50,000 coins.
+\n
+2. You can only cash out once a week.
+\n
+3. A single cash out exceeds INR 1000 will required 20 - 30 working days to process.
+"                 android:textColor="@color/gray"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

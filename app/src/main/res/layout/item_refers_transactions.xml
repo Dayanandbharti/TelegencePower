@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/d_round_white_background"
+        android:layout_centerVertical="true">
+
+        <View
+            android:id="@+id/account_color_strip"
+            android:layout_width="@dimen/strip_width"
+            android:layout_height="match_parent"
+            android:background="@color/gray_darkest"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:minHeight="@dimen/card_min_height" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    android:id="@+id/product_ID"
+
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:visibility="gone"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/serial"
+
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/left"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_toRightOf="@+id/left"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/productimage"
+                    app:placeholderImageScaleType="fitXY"
+                    app:roundAsCircle="true"/>
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/productimage"
+                  android:orientation="vertical">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Product Name"
+                          android:marqueeRepeatLimit="2"
+                          android:layout_centerVertical="true"
+                          android:textSize="14sp"
+                          android:id="@+id/product_name"
+
+                          android:layout_marginBottom="5dp"
+                          android:textColor="@color/black"
+                          android:layout_marginLeft="5dp" />
+
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text=""
+                          android:marqueeRepeatLimit="2"
+                          android:layout_centerVertical="true"
+                          android:textSize="10sp"
+                          android:layout_toRightOf="@+id/product_name"
+                          android:id="@+id/subscribed_text"
+
+                          android:layout_marginBottom="5dp"
+                          android:textColor="@color/black"
+                          android:layout_marginLeft="5dp" />
+
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:id="@+id/product_price"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:drawablePadding="5dp"
+                      android:gravity="left"
+                      android:singleLine="true"
+                      android:textStyle="bold|italic"
+                      android:textColor="@color/gray_darkest"
+                      android:textSize="12sp" />
+
+              </LinearLayout>
+
+              <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_back"
+
+                    >
+
+                </RelativeLayout>
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diamond_unit"
+                android:textSize="16sp"
+                android:backgroundTint="@color/gray_lightest"
+                android:backgroundTintMode="src_over"
+                android:layout_centerVertical="true"
+
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:paddingHorizontal="8dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text=""
+                android:textColor="@color/black"
+                />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginVertical="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/dot_line"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

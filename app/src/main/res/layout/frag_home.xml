@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/view_home"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/demo_flipper_add"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/d_round_white_background"
+            android:backgroundTint="@color/gray_lightest" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/testimonial_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_bg"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="@color/blue"
+            android:padding="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/testimonial_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Name"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/testimonial_profile"
+            />
+
+        <TextView
+            android:id="@+id/testimonial_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:text="Description"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/testimonial_name"
+            />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtgold_rate"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:outlineAmbientShadowColor="@color/redcolor"
+                    android:ellipsize ="marquee"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollHorizontally="true"
+                    />
+
+                    <RelativeLayout
+                        android:id="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_alignParentTop="true"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/d_less_round_white_background"
+                        android:backgroundTint="@color/gray_lightest"
+                        >
+
+                        <ImageView
+                            android:id="@+id/ic_search_imag"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_search_icon"
+                            />
+
+                        <EditText
+                            android:id="@+id/edt_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_toRightOf="@+id/ic_search_imag"
+                            android:background="@color/transparent"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:hint="Search Your Course"
+                            android:text=""
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+
+                            android:textColorHint="@color/gray_darkest"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/top"
+                        android:layout_below="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        >
+
+                        <ViewFlipper
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="15dp"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/viewflipper" />
+
+                        <RelativeLayout
+                            android:id="@+id/viewPagerIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="20dp"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/profile_Viewer"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/viewprevious"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2" />
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                     />
+
+                                <ImageView
+                                    android:id="@+id/viewNext"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                />
+
+                            </LinearLayout>
+
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/viewPagerCountDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/top" />
+
+                    <RelativeLayout
+                        android:id="@+id/news_section"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@+id/viewPagerCountDots"
+                        android:layout_width="match_parent"
+                        android:background="@color/app_sec_color"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/newS_head"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/news_blue_bg"
+                            android:textSize="20sp"
+                            android:text="News"
+                            android:paddingRight="15dp"
+
+                            android:textColor="@color/white"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/txt_news_section"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/newS_head"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:freezesText="true"
+                            android:gravity="center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingRight="10dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                             />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_helpful_action"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_toRightOf="@+id/newS_head"
+                            android:layout_alignParentRight="true"
+                            android:paddingHorizontal="10dp" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/top_3_view"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/news_section"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_marginHorizontal="4dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/box">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:paddingHorizontal="5dp"
+                                android:layout_gravity="left"
+                                android:src="@drawable/icon"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:textSize="20dp"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+
+                                android:text="Study Material"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/card_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_marginHorizontal="4dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/box2">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:paddingHorizontal="5dp"
+                                android:layout_gravity="left"
+                                android:src="@drawable/icon2"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:textSize="20dp"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+
+                                android:text="Download\nI Card"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:id="@+id/view_certificate"
+                            android:layout_marginHorizontal="4dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/box3">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:paddingHorizontal="5dp"
+                                android:layout_gravity="left"
+                                android:src="@drawable/icon3"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:textSize="20dp"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+
+                                android:text="Download Certificate"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/top_banner"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/d_round_white_background"
+                        android:backgroundTint="@color/graycolor"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/top_3_view"
+                        android:scaleType="fitXY"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/post_Section"
+                        android:layout_marginVertical="10dp"
+                        android:layout_below="@+id/top_banner"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/d_less_round_gray_border"
+                        android:backgroundTint="@color/blue"
+                        android:backgroundTintMode="src_over"
+                        android:layout_marginHorizontal="15dp"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:text="Post your Doubts"
+                            android:paddingRight="16dp"
+
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/doubts_icon"
+                            android:layout_centerVertical="true"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bottom"
+                        android:layout_below="@+id/post_Section"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="200dp"
+                        >
+
+                        <ViewFlipper
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/viewflipperbottom" />
+
+                        <RelativeLayout
+                            android:id="@+id/viewPagerIndicatorbottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="20dp"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/profile_Viewerbottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/viewpreviousbottom"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/viewNextbottom"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    />
+
+                            </LinearLayout>
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewBottomPagerCountDots"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/search">
+
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/img_no_job1"
+                            android:visibility="invisible"
+                            android:layout_marginTop="-5dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_whoops"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No Courses Found"
+                            android:textColor="@color/black"
+                            android:background="@drawable/d_less_round_white_background"
+                            android:padding="5dp"
+                            android:visibility="gone"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="5dp"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:layout_toRightOf="@+id/img_no_job1"
+                            android:layout_marginHorizontal="10dp"
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_View_courses"
+                            android:layout_width="match_parent"
+                            android:layout_marginHorizontal="12dp"
+                            android:padding="4dp"
+                            android:background="@drawable/d_bottom_left_right_radius"
+                            android:backgroundTint="@color/gray_lightest"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                             />
+
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylerview_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/post_Section"
+                        android:paddingHorizontal="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_recomended"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="30dp"
+                        android:layout_below="@+id/recylerview_category"
+                        android:text="Recommended"
+                        android:textColor="@color/black"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@+id/txt_recomended"
+                        android:paddingHorizontal="10dp"
+                        android:layout_above="@+id/bottom_banner"/>
+
+                    <TextView
+                        android:id="@+id/txt_actions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:textSize="30dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/recylerview"
+                        android:text="Helpful actions"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="30dp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/txt_actions"
+                        android:text="News and Updates"
+                        android:textColor="@color/black"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylerview_news_updates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@+id/txt_news"
+                        android:paddingHorizontal="10dp"
+                        android:layout_above="@+id/bottom_banner"/>
+
+                    <ImageView
+                        android:id="@+id/bottom_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@drawable/d_round_white_background"
+                        android:backgroundTint="@color/graycolor"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:scaleType="fitXY"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/no_data_layout"
+                        android:visibility="gone"
+                        android:background="@color/app_color">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:id="@+id/img_no_job"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_whoops"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@+id/img_no_job"
+                            android:layout_centerHorizontal="true"
+                            android:text="Whoops!"
+                            android:textColor="@color/app_sec_color"
+                            android:id="@+id/whoops"
+                            android:textSize="22sp"/>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@+id/whoops"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:textColor="@color/app_sec_color"
+                            android:layout_marginLeft="55dp"
+                            android:layout_marginRight="55dp"
+                            android:text="There is no plan"
+                            android:textSize="14sp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/pbar"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

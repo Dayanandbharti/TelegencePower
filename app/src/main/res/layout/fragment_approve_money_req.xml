@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/d_less_round_white_background"
+    android:backgroundTint="@color/black"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
+
+        <!--Login Name-->
+        <RelativeLayout
+            android:id="@+id/login_main"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/third"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/view_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:background="@drawable/d_round_white_background"
+                            android:padding="10dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_goldprice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Price   : 0%"
+                                android:textColor="@color/app_color"
+                                />
+
+
+                            <LinearLayout
+                                android:layout_marginVertical="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:background="@drawable/dot_line"
+                                android:orientation="vertical" />
+
+
+
+                            <TextView
+                                android:id="@+id/txt_tax"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:visibility="gone"
+                                android:text="Tax     : 0%"
+                                android:textColor="@color/app_color"
+                                />
+
+                            <LinearLayout
+                                android:layout_marginVertical="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/dot_line"
+                                android:orientation="vertical" />
+
+                            <TextView
+                                android:id="@+id/txt_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Amount : INR 0.00"
+                                android:textColor="@color/app_color"
+                                />
+
+                            <LinearLayout
+                                android:layout_marginVertical="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/dot_line"
+                                android:orientation="vertical" />
+
+                            <TextView
+                                android:id="@+id/txt_goldquantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Physical Quantity of Gold : 0 g(mg)"
+                                android:textColor="@color/app_color"
+                                />
+
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="Review Money Request"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="20dp"
+                            android:background="@drawable/d_bottom_gray_line"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="@dimen/auth_text_height"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/textbg">
+
+
+                            <ImageView
+                                android:id="@+id/iconmob"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/rupee1"
+                                android:tint="@color/white"
+                                />
+
+                            <EditText
+                                android:id="@+id/txtMobileNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/iconmob"
+                                android:ems="5"
+                                android:layout_centerVertical="true"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:layout_marginLeft="2dp"
+                                android:digits="1234567890"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="phone"
+                                android:textSize="@dimen/login_edit_size"
+                                android:maxLength="5"
+                                android:paddingVertical="4dp"
+                                android:paddingHorizontal="5dp"
+                                android:layout_marginRight="10dp"
+
+                                android:hint="0"
+                                android:textColorHint="@color/white40"
+                                android:textColor="@color/white"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="@dimen/auth_text_height"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/textbg" >
+
+
+                            <ImageView
+                                android:id="@+id/iconfirstName"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_centerVertical="true"
+                                android:visibility="gone"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/user_signup_icon"
+                                />
+
+                            <EditText
+                                android:id="@+id/firstname_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/iconfirstName"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890 "
+                                android:layout_centerVertical="true"
+                                android:background="@color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:textSize="@dimen/login_edit_size"
+                                android:paddingVertical="4dp"
+                                android:layout_marginRight="10dp"
+                                android:hint="Details"
+                                android:textColorHint="@color/white40"
+                                android:textColor="@color/white"
+                                />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/approve_btn"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="42dp"
+                                android:layout_below="@+id/lnr"
+                                android:text="Approve"
+                                android:layout_centerInParent="true"
+                                android:paddingBottom="5dp"
+                                android:gravity="center"
+                                android:layout_marginHorizontal="30dp"
+                                android:textColor="@color/background"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:background="@drawable/login_bg"
+                                android:backgroundTint="@color/green"/>
+
+                            <Button
+                                android:id="@+id/disapprove"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="42dp"
+                                android:layout_below="@+id/lnr"
+                                android:text="Reject"
+                                android:layout_centerInParent="true"
+
+                                android:paddingBottom="5dp"
+                                android:gravity="center"
+                                android:layout_marginHorizontal="30dp"
+                                android:textColor="@color/background"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:background="@drawable/login_bg"
+                                android:backgroundTint="@color/redcolor"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/view_responce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:background="@color/app_color">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/img_status"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:tint="@color/app_sec_color"
+                        android:src="@drawable/done"
+
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtview_msg"
+                        android:text=""
+                        android:textSize="30sp"
+                        android:layout_below="@+id/img_status"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:textColor="@color/app_sec_color"
+                        />
+
+                    <LinearLayout
+                        android:layout_below="@+id/txtview_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/go_to_home"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:drawablePadding="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:drawableTint="@color/white"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:paddingVertical="4dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:background="@drawable/d_less_round_black_background"
+                            android:backgroundTintMode="src_over"
+                            android:backgroundTint="@color/app_sec_color"
+                            android:text="Go to Home Screen"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            />
+
+                        <Button
+                            android:id="@+id/go_to_orders"
+                            android:layout_width="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:drawablePadding="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:drawableTint="@color/white"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:paddingVertical="4dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:background="@drawable/d_less_round_black_background"
+                            android:backgroundTintMode="src_over"
+                            android:backgroundTint="@color/app_sec_color"
+                            android:text="Go to My Donations"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

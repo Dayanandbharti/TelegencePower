@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        >
+
+        <!--Login Name-->
+        <RelativeLayout
+            android:id="@+id/login_main"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/third"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lnr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/view_update_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="@dimen/auth_text_height"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/textbg">
+
+                            <ImageView
+                                android:id="@+id/cp_iconpassword"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:imeOptions="actionNext"
+                                android:layout_marginLeft="2dp"
+                                android:visibility="gone"
+                                android:src="@drawable/signup_password" />
+
+                            <EditText
+                                android:id="@+id/edt_pass"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/cp_iconpassword"
+                                android:ems="10"
+                                android:imeOptions="actionDone"
+                                android:layout_marginLeft="10dp"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:textSize="@dimen/login_edit_size"
+                                android:maxLength="10"
+                                android:paddingVertical="4dp"
+                                android:layout_marginRight="10dp"
+                                android:paddingHorizontal="10dp"
+                                android:hint="Password"
+                                android:textColorHint="@color/white40"
+                                android:textColor="@color/white" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/update_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_below="@+id/lnr"
+                            android:text="Confirm"
+                            android:layout_centerInParent="true"
+
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="30dp"
+                            android:textColor="@color/background"
+                            android:textSize="16sp"
+                            android:background="@drawable/login_bg" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

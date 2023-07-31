@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    <string name="private_app_id" translatable="false">cce918bf0f264261b79788a34a4fa18d</string>
+    <string name="private_app_certificate" translatable="false">1832f82c97524671a71bf8e5a08c6476</string>
+-->
+
+
+    <!-- Main Activity -->
+
+    <!-- Setting Activity -->
+
+    <!-- Live Activity -->
+
+    <!-- Role Choose Activity -->
+
+    <!-- Legal digits for channel names -->
+
+    /////////////////////////// OLD OLD OLD OLD OLD /////////////////////////////////////////
+
+
+    <!-- My Profile Fragment -->
+
+    <string name="app_name" translatable="false">Telegence</string>
+
+    <string name="UN" translatable="false" >dontlook</string>
+    <string name="P" translatable="false" >be6f739958XX</string>
+    <string name="se" translatable="false" >CLNEXT</string>
+
+    <!--<string name="facebook_app_id" translatable="false">214320213603834</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb214320213603834</string>-->
+
+    <!--    <string name="ad_app_id"  translatable="false">ca-app-pub-2003958529915135~9613277358</string>-->
+    <!--    <string name="my_Interstitial_Add"  translatable="false">ca-app-pub-2003958529915135/4531634193</string>-->
+    <!--    <string name="banner_ad"  translatable="false">ca-app-pub-2003958529915135/6328460856</string>-->
+
+    <string name="banner_ad"  translatable="false">ca-app-pub-2</string>
+
+    <string name="apply_for_verification"  translatable="false"></string>
+    <string name="upper_body"  translatable="false">A verified badge is check that aapears next to an \nTelegence accounts name to indiacte that the \naccount is the authentic presence of notable \npublic figure , celebrity, global brand or entity it \nrepresents.</string>
+
+
+    <string name="version"  translatable="false">2.2</string>
+    <string name="device"  translatable="false">android</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="kindly_update_your_application" translatable="false">Kindly Update your Application</string>
+    <string name="by_agree" translatable="false" formatted="false" >We do not post anything to Facebook</string>
+    <string name="terms_of_Service" translatable="false" formatted="false" >By using Ek Parivar, you agree to <u>Terms of Service</u></string>
+    <string name="privacy_policy" translatable="false" formatted="false" >and <u>Privacy Policy</u> </string>
+    <string name="select_users"><b>Employee</b></string>
+    <string name="select_projects"><b>Projects</b></string>
+    <string name="select_manager"><b>Managers</b></string>
+
+</resources>

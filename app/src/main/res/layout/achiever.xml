@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/d_round_white_background"
+        android:backgroundTint="@color/gray_lightest" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/testimonial_profile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle_bg"
+        android:backgroundTintMode="multiply"
+        android:backgroundTint="@color/blue"
+        android:padding="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/testimonial_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="Name"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/testimonial_profile"
+        />
+
+    <TextView
+        android:id="@+id/testimonial_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:text="Description"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/testimonial_name"
+        />
+
+</RelativeLayout>

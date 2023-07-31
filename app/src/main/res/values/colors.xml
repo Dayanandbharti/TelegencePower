@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <color name="background">#EEF4F6</color>
+    <color name="background__">#C6DEED</color>
+    <color name="background_">#0C57B0E6</color>
+    <color name="background1">#00B8D4</color>
+
+    <color name="blue">#104AF4</color>
+
+    <color name="black_75_transparent">#0DB3AFAF</color>
+    <color name="black_half_transparent">#66000000</color>
+
+    <color name="orange_mainwallet_transparent">#ED8484</color>
+    //////////////// OLD OLD OLD OLD OLD /////////////////////////////////////////////////////
+    <color name="gray">#878787</color>
+    <color name="gray_darkest">#656565</color>
+
+    <color name="gray_lightest">#efefef</color>
+    <color name="gray_edit_profile">#efefef</color>
+
+    <color name="light_g">#79E8B5</color>
+
+<!--    <color name="colorAccent">#C1B22E</color>-->
+    <color name="colorAccent">#00B8D4</color>
+    <color name="late">#C1B22E</color>
+
+    <color name="maincolor">#E25E14</color>
+
+    <color name="white">#fff</color>
+    <color name="white40">#A6FFFFFF</color>
+    <color name="colorwhite_50">#CCffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#00C853</color>
+    <color name="graycolor">#D3D3D3</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="lightgraycolor">#f2f2f2</color>
+    <color name="darkgray">#93959A</color>
+    <color name="dimgray">#696969</color>
+    <color name="app_top_head">#7762E4</color>
+
+    <color name="delete_message_text">#b8b8b8</color>
+    <color name="delete_message_bg">#f2f2f2</color>
+    <color name="light_yellow">#D6CF92</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_85">#D9FFFFFF</color>
+    <color name="transparent_60">#99FFFFFF</color>
+    <color name="redcolor">#ff0008</color>
+    <color name="redcolor_">#F18589</color>
+
+    <color name="app_color">#000</color>
+    <color name="app_sec_color">#E2E2E2</color>
+
+    <color name="gray_alpha2">#af232323</color>
+
+</resources>

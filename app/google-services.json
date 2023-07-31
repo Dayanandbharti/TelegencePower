@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "187675123292",
+    "firebase_url": "https://telegence-c1ec7-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "telegence-c1ec7",
+    "storage_bucket": "telegence-c1ec7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187675123292:android:9ce13b10c7db68afd99099",
+        "android_client_info": {
+          "package_name": "com.telegence.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187675123292-pl1bu9k4ddja60o1p8gmupbapja56qke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.telegence.app",
+            "certificate_hash": "069ae636bf1953320a7c7fe41593da9fc3f3b4e1"
+          }
+        },
+        {
+          "client_id": "187675123292-jkchqpr5b657o4v3qppgpr6num5jhr66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq8J8fNjsPCvKX5n2t4rQklT6K5oOK8LM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187675123292-jkchqpr5b657o4v3qppgpr6num5jhr66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

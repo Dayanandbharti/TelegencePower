@@ -1,0 +1,640 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Setting_F"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@drawable/d_bottom_gray_line"
+                
+                >
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitStart"
+                    android:id="@+id/Goback"
+                    android:src="@drawable/ic_back"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_below="@+id/toolbar1">
+
+
+                <Button
+                    android:id="@+id/wallet_btn1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/d_bottom_gray_line"
+                    android:onClick="onClick"
+                    android:padding="15dp"
+                    android:text="Diamonds"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/wallet_btn2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/d_bottom_gray_line"
+                    android:padding="15dp"
+                    android:text="Coins"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/diamond_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/top_baar"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:id="@+id/Go_back"
+                            android:layout_width="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="30dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_back"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Send Money"
+                            android:textSize="28sp"
+                            android:fontFamily="@font/holtwood_one_sc"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_toRightOf="@+id/Go_back"
+                            android:layout_toLeftOf="@+id/txtmyBalance"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/txtmyBalance"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:layout_marginRight="10dp"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:drawableLeft="@drawable/rupee"
+                            android:drawableTint="@color/white"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/historyLayout"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="10dp" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="History"
+                            android:drawableLeft="@drawable/icon_remain_time"
+                            android:textSize="8dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/gray"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/diamond_page2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:paddingHorizontal="10dp"
+                    android:background="@color/gray_lightest"
+                    android:paddingVertical="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recharge"
+                        android:textSize="15dp"
+                        android:layout_alignParentLeft="true"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="India"
+                        android:visibility="gone"
+                        android:textSize="14dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/gray"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/top_baar"
+                    android:gravity="center_horizontal"
+                    android:background="@color/background" >
+
+                    <ImageView
+                        android:id="@+id/view_Coin"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_above="@+id/txtadd_money"
+                        android:src="@drawable/rupee_icon2"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/txtadd_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:layout_above="@+id/edtadd_money"
+                        android:fontFamily="@font/poly"
+                        android:text="Send Money"
+                        android:layout_marginVertical="20dp"
+                        android:gravity="center" />
+
+                    <EditText
+                        android:id="@+id/edtadd_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent"
+                        android:textColor="@color/black"
+                        android:maxLength="5"
+                        android:layout_above="@+id/view_otions"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="60dp"
+                        android:layout_marginBottom="50dp"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:gravity="top"
+                        android:drawableLeft="@drawable/rupee_48"
+                        android:drawableTint="@color/black"
+                        android:text=""
+                        android:hint="0" />
+
+
+                    <LinearLayout
+                        android:id="@+id/view_otions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_above="@+id/edtadd_remarks"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/txt1000"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:background="@drawable/d_round_white_background"
+                            android:backgroundTint="@color/black_75_transparent"
+                            android:text="+1,000"
+                            android:padding="10dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/txt2000"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:background="@drawable/d_round_white_background"
+                            android:backgroundTint="@color/black_75_transparent"
+                            android:text="+2,000"
+                            android:padding="10dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/txt5000"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:background="@drawable/d_round_white_background"
+                            android:backgroundTint="@color/black_75_transparent"
+                            android:text="+5,000"
+                            android:padding="10dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtadd_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/d_bottom_gray_line"
+                        android:backgroundTint="@color/gray_alpha2"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="16dp"
+                        android:textStyle="italic"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="text"
+                        android:layout_above="@+id/view_manager"
+                        android:layout_marginHorizontal="10dp"
+                        android:gravity="top"
+                        android:text=""
+                        android:hint="Any Message.." />
+
+                    <RelativeLayout
+                        android:id="@+id/view_manager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_above="@+id/view_projects">
+
+                        <TextView
+                            android:id="@+id/txtchoose_manager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:paddingVertical="4dp"
+                            android:fontFamily="@font/poly"
+                            android:text="@string/select_manager" />
+
+                        <Spinner
+                            android:id="@+id/spn_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/d_bottom_gray_line"
+                            android:layout_below="@+id/txtchoose_manager"
+                            android:paddingVertical="4dp"
+                            android:backgroundTint="@color/gray_alpha2" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/view_projects"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_above="@+id/btn_submit_Req">
+
+                        <TextView
+                            android:id="@+id/txtchoose_project"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:paddingVertical="4dp"
+                            android:fontFamily="@font/poly"
+                            android:text="@string/select_users" />
+                        <Spinner
+                            android:id="@+id/spn_employee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/d_bottom_gray_line"
+                            android:layout_below="@+id/txtchoose_project"
+                            android:paddingVertical="4dp"
+                            android:backgroundTint="@color/gray_alpha2" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btn_submit_Req"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/submit_request_btn"
+                        android:text="Submit Request"
+                        android:textSize="20sp"
+                        android:layout_margin="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                </RelativeLayout>
+
+
+
+                <GridView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchMode="columnWidth"
+                    android:numColumns="1"
+                    android:background="@color/white"
+                    android:id="@+id/grdbatch" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/coins_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                >
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:background="@drawable/account"
+                    android:layout_gravity="center"
+                    
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        
+                        android:gravity="center" >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:id="@+id/txtcoin_balance"
+                            android:gravity="center"
+                            
+                            android:textAlignment="center"
+                            android:text="0 = 0 INR"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            
+                            android:id="@+id/mytxtcoin_balance"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="0 = 0 INR"
+                            />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_below="@+id/txtcoin_balance"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:text="Account Balance"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="10dp" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="History"
+                            android:layout_marginTop="20dp"
+                            android:drawableLeft="@drawable/icon_remain_time"
+                            android:textSize="8dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/gray"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/coins_img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    tools:src="@drawable/exchange_diamonds" />
+                <ImageView
+                    android:id="@+id/coins_img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    tools:src="@drawable/exchange_rewards" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/exchange_view"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/d_round_gray_border"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No of Coin"
+                            android:textStyle="bold"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/gray"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:numeric="integer"
+                            android:textStyle="bold"
+                            android:id="@+id/et_no_of_diamonds"
+                            android:maxLength="4"
+                            android:layout_toStartOf="@+id/btn_exchange"
+                            android:textColor="@color/gray"
+                            android:layout_marginEnd="10dp"
+                            android:hint="0000"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:background="@drawable/d_gray_border_white_bg"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_exchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:background="@drawable/d_gray_border_white_bg"
+                            android:text="Exchange"
+                            
+                            android:backgroundTint="@color/redcolor"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_alignParentEnd="true"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Password"
+                    android:textStyle="bold"
+                    
+                    android:textColor="@color/gray"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    
+
+                    android:layout_height="wrap_content"
+                    android:text="1. Only users with the correct password can cash out coins or exchange coins for diamonds
+\n
+2. If you forget or need to reset your, password please tap forget password?
+\n
+3. If you have any other Quetions please tap feedback to contact us.
+"
+                    android:textColor="@color/gray"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash out Rules"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"
+                    
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="1. You need 3150 coins to submit a cash out request.
+                The Cash out amount must not exceeded 1,50,000 coins.
+\n
+2. You can only cash out once a week.
+\n
+3. A single cash out exceeds INR 1000 will required 20 - 30 working days to process.
+"                 android:textColor="@color/gray"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

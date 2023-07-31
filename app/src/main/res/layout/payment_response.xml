@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="10dp"
+    android:layout_height="600dp"
+    android:id="@+id/payment_resp_layout"
+    android:background="@color/transparent"
+    tools:context="com.telegence.app.Settings.Payment_Resp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+        <ImageView
+            android:id="@+id/imgback"
+            android:src="@drawable/payment_success"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/txtmsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="55dp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="50dp"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:translationZ="20dp"
+            android:textStyle="bold|italic"
+            />
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtmsg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp" />
+    </RelativeLayout>
+</FrameLayout>

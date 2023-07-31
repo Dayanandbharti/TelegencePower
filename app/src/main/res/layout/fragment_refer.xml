@@ -1,0 +1,187 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+
+    tools:context=".Profile.Edit_Profile_F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/refer_and_earn_img"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refer to your friend "
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GOLD"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/d_round_black_border"
+            android:layout_marginVertical="5dp"
+            android:backgroundTint="@color/app_color"
+            android:backgroundTintMode="src_over"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/refer_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/copy_icon"
+                android:tint="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/refer_code"
+                />
+
+        </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/refer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refer Friend"
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        android:paddingVertical="6dp"
+
+        android:paddingHorizontal="50dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/d_round_black_background"
+        android:backgroundTint="@color/app_color"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_my_referrers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginVertical="10dp"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        />
+
+
+</RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/no_data_layout"
+            android:visibility="gone"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/img_no_job"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_whoops"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/img_no_job"
+                android:layout_centerHorizontal="true"
+                android:text="Whoops!"
+                android:textColor="@color/black"
+                android:id="@+id/whoops"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/whoops"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:text="There is no refers you have so far"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/dot_line"
+            android:orientation="vertical" />
+
+        <GridView
+            android:id="@+id/grd_refer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="1"
+            android:stretchMode="columnWidth" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="18sp"
+
+        android:textColor="@color/app_color"
+        android:text=""
+        />
+
+
+</FrameLayout>

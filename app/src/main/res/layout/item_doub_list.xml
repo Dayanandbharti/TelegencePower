@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainlayout" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:padding="5dp"
+        android:background="@drawable/lblue_bg_blue_round_border"
+        android:layout_centerVertical="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:src="@drawable/round_profile_image_placeholder"
+            android:id="@+id/user_image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/user_image"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employee name"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:id="@+id/username"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emp_id"
+                    android:text="E.ID: #TPPL421"
+                    android:textSize="8dp"
+                    android:layout_below="@+id/username"
+                    android:textAllCaps="true"
+                    android:maxLines="2"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/gray_alpha2"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datetxt"
+                    android:textSize="10sp"
+                    android:gravity="right|center_vertical"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:text="1 January"
+                    android:textColor="@color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message"
+                android:text="Your Message"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textSize="10dp"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/posted_by_name"
+                android:text="Abhi Kumar"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:layout_gravity="right"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/posted_by_id"
+                android:text="E.ID: #TPPL421"
+                android:textSize="8dp"
+                android:textAllCaps="true"
+                android:maxLines="2"
+                android:layout_gravity="right"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/gray_alpha2"
+                android:layout_marginLeft="20dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
